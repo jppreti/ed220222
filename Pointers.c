@@ -27,5 +27,22 @@ int main() {
     pi = NULL; //para garantir que o endereço não possa ser usado por acidente
     printf("Endereco de pi após atribuir NULL: %p\n",pi);
 
+    int *numbers = (int *) malloc(sizeof(int) * 3);
+    *(numbers+0) = 1;
+    *(numbers+1) = 2;
+    *(numbers+2) = 3;
+    
+    for (int i = 0; i < 3; i++)
+        printf("numbers[%d] = %d\n",i,numbers[i]);
+    
+    for (int i = 0; i < 3; i++)
+        printf("*(numbers+%d) = %d\n",i,*(numbers+i));
+    
+    int *aux = numbers;
+    for (int i = 0; i < 3; i++) {
+        printf("aux = %d\n",*aux);
+        aux++;
+    }
+
     return EXIT_SUCCESS;
 }
