@@ -1,4 +1,4 @@
-all: clear pointers linkedlist
+all: clean pointers linkedlist
 
 pointers:
 	@echo ""
@@ -16,9 +16,9 @@ linkedlist:
 	@echo "|         LISTAS            |"
 	@echo "============================="
 	@echo "Compilando o exemplo de lista simplesmente ligada."
-	gcc LinkedList.h LinkedList.c LinkedListTest.c -o linkedlist
+	gcc log.h log.c LinkedList.h LinkedList.c LinkedListTest.c -o linkedlist
 	chmod +x linkedlist
-clear:
+clean:
 	@echo ""
 	@echo "============================="
 	@echo "|   REMOVENDO PROGRAMAS     |"
